@@ -28,9 +28,16 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/bootstrap/bootstrap.min.css",
+              "src/assets/fontawesome5/css/all.css",
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/jquery/jquery.min.js",
+              "src/assets/bootstrap/popper.min.js",
+              "src/assets/bootstrap/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -93,6 +100,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -124,6 +132,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "blogify-app"
 }
