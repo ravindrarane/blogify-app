@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { httpInterceptorProviders } from './http-interceptors/index';
+import { InputsModule } from '@progress/kendo-angular-inputs';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { httpInterceptorProviders } from './http-interceptors/index';
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    InputsModule
   ],
   providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]

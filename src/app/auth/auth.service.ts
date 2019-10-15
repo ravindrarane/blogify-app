@@ -31,11 +31,11 @@ export class AuthService {
     })
   };
   login(username: string, password: string) {
-    httpOptions.headers = httpOptions.headers.set('Authorization', 'Basic ' + btoa(username + ":" + password));
-    return this.http.post<any>(`${this.serverUrl}/api/auth/token`, { } , httpOptions)
+   // httpOptions.headers = httpOptions.headers.set('Authorization', 'Basic ' + btoa(username + ":" + password));
+    return this.http.post<any>(`${this.serverUrl}/auth/login`, {email: username, password: password} , httpOptions)
     .pipe(map(user => {
-        if (user && user.token) {
-          localStorage.setItem('currentUser', JSON.stringify(user));
+        if (user && user.access_token) {
+          localStorage.setItem('currentUser', JSON.stringify(user.access_token));
         }
       }),
       catchError(this.handleError)
